@@ -22,7 +22,7 @@
     /* Navbar: only buttons top-right */
     nav {
       display: flex;
-      justify-content: flex-end; /* remove name on left */
+      justify-content: flex-end; /* no name on left */
       align-items: center;
       padding: 20px 40px;
       background: transparent;
@@ -42,7 +42,7 @@
       color: #ffd700; /* gold hover */
     }
 
-    /* Hero area: center buttons vertically */
+    /* Hero area: center content vertically */
     .hero {
       display: flex;
       flex-direction: column;
@@ -52,23 +52,26 @@
       text-align: center;
     }
 
-    .hero .name-bottom {
+    /* Name centered near bottom */
+    .name-bottom {
       position: absolute;
-      bottom: 50px; /* near bottom */
-      font-size: 60px; /* bigger name text */
+      bottom: 50px;            /* distance from bottom */
+      left: 50%;               /* center horizontally */
+      transform: translateX(-50%);
+      font-size: 80px;         /* bigger font */
       font-weight: bold;
       text-align: center;
-      width: 100%;
+      color: white;
     }
 
-    /* Optional responsive adjustments */
+    /* Responsive adjustments */
     @media (max-width: 768px) {
       .nav-buttons a {
         font-size: 16px;
         margin-left: 15px;
       }
-      .hero .name-bottom {
-        font-size: 40px;
+      .name-bottom {
+        font-size: 50px;       /* smaller on mobile */
         bottom: 30px;
       }
     }
@@ -87,7 +90,7 @@
 
   <!-- Hero Section -->
   <div class="hero">
-    <!-- You can optionally add section buttons here if desired -->
+    <!-- Optional: Add section buttons here if desired -->
   </div>
 
   <!-- Name centered near bottom -->
