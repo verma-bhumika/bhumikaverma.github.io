@@ -11,29 +11,21 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background-image: url('background.png'); /* your background */
+      background-image: url('background.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       height: 100vh;
-      color: white; /* white text on image */
+      color: white;
     }
 
-    /* Navbar */
+    /* Navbar: only buttons top-right */
     nav {
       display: flex;
-      justify-content: space-between; /* left: name, right: buttons */
+      justify-content: flex-end; /* remove name on left */
       align-items: center;
       padding: 20px 40px;
       background: transparent;
-    }
-
-    /* Name on top-left */
-    .brand {
-      font-size: 24px;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
     }
 
     /* Buttons on top-right */
@@ -42,7 +34,7 @@
       color: white;
       margin-left: 25px;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 20px; /* bigger text for section buttons */
       transition: color 0.2s;
     }
 
@@ -50,43 +42,42 @@
       color: #ffd700; /* gold hover */
     }
 
-    /* Centered content (optional) */
+    /* Hero area: center buttons vertically */
     .hero {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: calc(100vh - 80px); /* full height minus navbar */
+      height: 100%;
       text-align: center;
     }
 
-    .hero h1 {
-      font-size: 60px;
-      margin: 0;
-    }
-
-    .hero p {
-      font-size: 20px;
-      margin-top: 10px;
+    .hero .name-bottom {
+      position: absolute;
+      bottom: 50px; /* near bottom */
+      font-size: 60px; /* bigger name text */
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
     }
 
     /* Optional responsive adjustments */
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 40px;
-      }
       .nav-buttons a {
-        font-size: 14px;
+        font-size: 16px;
         margin-left: 15px;
+      }
+      .hero .name-bottom {
+        font-size: 40px;
+        bottom: 30px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- Navigation Bar (no name on left) -->
   <nav>
-    <a href="index.html" class="brand">Bhumika Verma</a>
     <div class="nav-buttons">
       <a href="about.html">About</a>
       <a href="resume.html">Resume</a>
@@ -94,7 +85,13 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
+  <div class="hero">
+    <!-- You can optionally add section buttons here if desired -->
+  </div>
 
+  <!-- Name centered near bottom -->
+  <div class="name-bottom">Bhumika Verma</div>
 
 </body>
 </html>
