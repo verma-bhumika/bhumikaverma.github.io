@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Bhumika Verma Portfolio</title>
+  <title>Bhumika Verma</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
   <style>
@@ -11,21 +11,29 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background-image: url('background.png');
+      background-image: url('background.png'); /* your background */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       height: 100vh;
-      color: white;
+      color: white; /* white text on image */
     }
 
-    /* Navbar: only buttons top-right */
+    /* Navbar */
     nav {
       display: flex;
-      justify-content: flex-end; /* no name on left */
+      justify-content: space-between; /* left: name, right: buttons */
       align-items: center;
       padding: 20px 40px;
       background: transparent;
+    }
+
+    /* Name on top-left */
+    .brand {
+      font-size: 40px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
     }
 
     /* Buttons on top-right */
@@ -34,7 +42,7 @@
       color: white;
       margin-left: 25px;
       font-weight: 500;
-      font-size: 20px; /* bigger text for section buttons */
+      font-size: 25px;
       transition: color 0.2s;
     }
 
@@ -42,45 +50,43 @@
       color: #ffd700; /* gold hover */
     }
 
-    /* Hero area: center content vertically */
+    /* Centered content (optional) */
     .hero {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100%;
+      height: calc(100vh - 80px); /* full height minus navbar */
       text-align: center;
     }
 
-    /* Name centered near bottom */
-    .name-bottom {
-      position: absolute;
-      bottom: 50px;            /* distance from bottom */
-      left: 50%;               /* center horizontally */
-      transform: translateX(-50%);
-      font-size: 80px;         /* bigger font */
-      font-weight: bold;
-      text-align: center;
-      color: white;
+    .hero h1 {
+      font-size: 60px;
+      margin: 0;
     }
 
-    /* Responsive adjustments */
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* Optional responsive adjustments */
     @media (max-width: 768px) {
-      .nav-buttons a {
-        font-size: 16px;
-        margin-left: 15px;
+      .hero h1 {
+        font-size: 40px;
       }
-      .name-bottom {
-        font-size: 50px;       /* smaller on mobile */
-        bottom: 30px;
+      .nav-buttons a {
+        font-size: 14px;
+        margin-left: 15px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Bar (no name on left) -->
+  <!-- Navigation Bar -->
   <nav>
+    <a href="index.html" class="brand">Bhumika Verma</a>
     <div class="nav-buttons">
       <a href="about.html">About</a>
       <a href="resume.html">Resume</a>
@@ -88,13 +94,7 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <!-- Optional: Add section buttons here if desired -->
-  </div>
 
-  <!-- Name centered near bottom -->
-  <div class="name-bottom">Bhumika Verma</div>
 
 </body>
 </html>
