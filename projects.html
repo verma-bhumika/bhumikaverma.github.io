@@ -1,41 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Bhumika Verma – Projects</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
   <style>
-    body { font-family: 'Poppins', sans-serif; margin: 0; background: #f4f6f8; }
-    nav { background: #222; padding: 15px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; }
-    section { max-width: 900px; margin: 40px auto; background: white; padding: 30px; border-radius: 10px; }
+    /* Full-page background same as landing page */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-image: url('background.png'); /* same background */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      color: black;
+    }
+
+    /* Navbar: same as landing page */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.3); /* semi-transparent */
+    }
+
+    .brand {
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-buttons a {
+      text-decoration: none;
+      color: white;
+      margin-left: 25px;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.2s;
+    }
+
+    .nav-buttons a:hover {
+      color: #ffd700;
+    }
+
+    /* Main content area */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;       /* white boxes */
+      padding: 30px;
+      border-radius: 10px;
+      color: black;            /* black text inside boxes */
+    }
+
+    .content h1, .content h2 {
+      margin-top: 0;
+    }
+
+    .project-card {
+      margin-bottom: 25px;
+    }
+
+    .project-card a {
+      text-decoration: none;
+      color: #2575fc;
+      font-weight: 500;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      nav { padding: 15px 20px; }
+      .nav-buttons a { font-size: 14px; margin-left: 15px; }
+      .content { margin: 20px; padding: 20px; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav>
-    <a href="about.html">About</a>
-    <a href="resume.html">Resume</a>
-    <a href="projects.html">Projects</a>
+    <a href="index.html" class="brand">Bhumika Verma</a>
+    <div class="nav-buttons">
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+    </div>
   </nav>
 
-  <section>
-    <h2>Projects</h2>
+  <!-- Projects content -->
+  <div class="content">
+    <h1>Projects</h1>
 
-    <p>
+    <div class="project-card">
       <strong>Project One</strong><br>
-      Short description<br>
+      Short description of project one.<br>
       <a href="projects/project1.html">View details →</a>
-    </p>
+    </div>
 
-    <p>
+    <div class="project-card">
       <strong>Project Two</strong><br>
-      Short description<br>
+      Short description of project two.<br>
       <a href="projects/project2.html">View details →</a>
-    </p>
+    </div>
 
-  </section>
+    <!-- Add more projects here -->
+  </div>
 
 </body>
 </html>
-
