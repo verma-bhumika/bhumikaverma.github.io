@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Name – Portfolio</title>
+  <title>Bhumika Verma</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -29,14 +29,13 @@
 </head>
 <body>
 
-  <h1>Hi, I’m Your Name 👋</h1>
-  <p>I’m a beginner learning web development.</p>
+  <h1>Hi, I’m Bhumika!</h1>
+  <p>In Progress...</p>
 
   <div class="card">
     <h2>About Me</h2>
     <p>
-      Write a short intro about yourself here.
-      What are you learning? What are you interested in?
+      I'm an engineering student at the University of Toronto.
     </p>
   </div>
 
